@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベントリスナー</title>
+    <link rel="stylesheet" href="stylesheet.css">
+<!--CSSの読み込み命令--><!--読み込むCSSファイルの指定-->
+</head>
+<body>
+    <input placeholder="ここに入力" />
+    <!--入力フォームを作成-->
+    <p id="history"></p>
+    <!--表示される場所をあらかじめ作っておく。JSでいじれるようにidもつける-->
+
+
+    <img src="https://hicbc.com/tv/kirby/image/kirby.gif" id="kirby">
+    <p id="history2" class="hyouji">キャラクターの名前が表示されるよ</p>
+    <div class ="black"></div>
+    <p id="name1" class ="nam1">カービィ</p>
+
+    </div>
+
+    <script>
+        const input = document.querySelector("input");
+        //inputという定数で、htmlのinput「タグ」にJSでアクセスするためのクエリーセレクター//
+        const history = document.getElementById("history");
+        //historyという定数で、JS上でhtmlのhistoryというidにアクセスするための下準備//
+
+        input.addEventListener("change", updataValue);
+        //定数inputに対してイベントリスナー※①「何を」したら②「何を」するか？//
+        //①第一引数はchange。「input」の「内容が変わったときに」, 「updataValueという関数を実行」//
+
+        function updataValue(e) {//ではupdataValueという関数はどんなものか？//
+        //eとはイベントの略。何かが起こった時の「それ」。今回はaddEventListenerで指定したinputのこと//
+            history.textContent = e.target.value;
+            //htmlのpタグ(history)の中に、e(何かが起こったそれ)中身、を代入する//
+        }
+
+        const kirby = document.getElementById("kirby");
+        const history2 = document.getElementById("history2");
+        const name1 = document.getElementById("name1");
+
+        kirby.addEventListener("click", fukidashi);
+        function fukidashi(e) {
+            history2.textContent = e.name1;
+        }
+
+
+
+    </script>
+</body>
+</html>

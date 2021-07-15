@@ -1,0 +1,19 @@
+*{box-sizing: border-box;}
+/*レイアウト崩れ防止*/
+
+li {list-style: none;}
+/*リストの黒点を消す*/
+
+.black {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top:350px;
+    left:0px;
+    
+}
+
+.hyouji {
+    background-color: white;
+}
